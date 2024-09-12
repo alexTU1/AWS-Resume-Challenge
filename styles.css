@@ -1,0 +1,111 @@
+:root{
+    --olive: #606c38;
+    --dkg: #283618;
+    --cream: #fefae0;
+    --burnt-orange: #bc6c25;
+    --tan: #dda15e;
+    --res-width: 60%;
+    --res-width-mobile: 90%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dkg);
+    color: var(--cream);
+}
+
+.error-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* Header Styles: Name, email, phone # */
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    height: 20px;
+    color: var(--tan);
+
+}
+
+.contact-info{
+    display: flex;
+    margin: 0;
+}
+
+.email, .phone-number{
+    padding-inline: 10px;
+}
+
+hr{
+    width: var(--res-width);
+    border-color: var(--tan);
+}
+
+
+/* Resume Styles */
+.resume-body{
+    width: var(--res-width);
+    height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.resume-section-heading{
+    background-color:var(--dkg);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    margin: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.555);
+}
+
+li{
+    padding: 10px;
+}
+
+section{
+    background-color: var(--olive);
+    margin-block: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.555);
+}
+
+h4{
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--burnt-orange);
+}
+a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 460px) {
+    .resume-body, hr{
+        width: var(--res-width-mobile);
+    }
+}
