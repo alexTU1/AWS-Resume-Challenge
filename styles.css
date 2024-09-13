@@ -27,6 +27,10 @@ body{
     height: 100vh;
 }
 
+strong{
+    margin: 0;
+    padding: 0;
+}
 
 /* Header Styles: Name, email, phone # */
 header{
@@ -104,7 +108,45 @@ a:hover{
     text-decoration: underline;
 }
 
-@media screen and (max-width: 460px) {
+/* View Counter */
+.view-counter{
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    border-radius: 50%;
+    border: var(--cream) 4px solid;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.555);
+    width: 40px;
+    height: 40px;
+    background-color: var(--burnt-orange);
+    
+}
+
+.view-counter:hover .view-counter-text{
+    display: flex;
+    opacity: 1;
+}
+
+.view-counter-text{
+    background-color: var(--burnt-orange);
+    padding: 6px;
+    border-radius: 4px;
+    width: 100px;
+    opacity: 0;
+    display: none;
+    position:absolute;
+    text-align: center;
+    bottom: 30px;
+    right: -50%;
+    margin: 20px;
+    transition: opacity 250ms ease-in-out;
+}
+
+@media screen and (max-width: 580px) {
     .resume-body, hr{
         width: var(--res-width-mobile);
     }
